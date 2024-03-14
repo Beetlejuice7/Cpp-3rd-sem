@@ -32,7 +32,7 @@ class B
 void B :: swap(A &a)
 {
     int temp = a.a;
-    a.a = a.b;                                          //<--Another way
+    a.a = a.b;                                         //<--Another way
     a.b = temp;
     cout << "After :-" << endl;
     cout << a.a << "\t" << a.b << endl;
