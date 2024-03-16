@@ -3,47 +3,54 @@ using namespace std;
 class B;
 class A
 {
-    int a = 4, b = 7;
+    int a;
     public:
+    A(int val)
+    {
+        a = val;
+    }
     void show()
     {
-        cout << "Before :-" << endl;
-        cout << a << "\t" << b << endl;
+        cout << "a : " << a << endl;
     }
-    friend class B;
+    friend void swap(A &oaj, B &obj);
 };
 class B
 {
-    int u, v;
+    int b;
     public:
-    void swap(A &a);
-    // {
-        // int *ptr, *pt;
-        // ptr = &a.a;
-        // pt = &a.b;                                  //<--One way
-        // int temp = *ptr;
-        // *ptr = *pt;
-        // *pt = temp;
-        // cout << "After :-" << endl;
-        // cout << a.a << "\t" << a.b << endl;
-    // }
-
+    B(int val)
+    {
+        b = val;
+    }
+    void show()
+    {
+        cout << "b : " << b << endl;
+    }
+    friend void swap(A &oaj, B &obj);
 };
-void B :: swap(A &a)
+
+void swap(A &oaj, B &obj)
 {
-    int temp = a.a;
-    a.a = a.b;                                         //<--Another way
-    a.b = temp;
-    cout << "After :-" << endl;
-    cout << a.a << "\t" << a.b << endl;
+    int temp = oaj.a;
+    oaj.a = obj.b;
+    obj.b = temp;
 }
+
 
 int main()
 {
-    A a;
-    B b;
-    a.show();
-    b.swap(a);
+    A oaj(4);
+    B obj(7);
+
+    cout << "Before swap :-" << endl;
+    oaj.show();
+    obj.show();
+
+    swap(oaj, obj);
+
+    cout << "After swap :-" << endl;
+    oaj.show();
+    obj.show();
     
-    return 0;
 }

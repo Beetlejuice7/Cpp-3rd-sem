@@ -1,24 +1,25 @@
 #include<iostream>
 using namespace std;
-static int count=7;
-class base
+class fun
 {
     public:
-    base()
+    fun()
     {
-        cout << "Hello World." << endl;
+        cout << "this called." << endl;
     }
-};
-class derived : public base
-{
-    public:
-    derived() : base() {}
+    ~fun()
+    {
+        cout << "deleted." << endl;
+    }
 };
 
 
 int main()
 {
-    derived de;
-    cout << count;
+    fun* obj = new fun;
+
+    delete obj;
+
     return 0;
+    
 }
