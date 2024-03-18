@@ -1,13 +1,16 @@
 #include<iostream>
 using namespace std;
-inline int sum(int a, int b)
+inline int sqr(int a)
 {
-    return a+b;
+    return a * a;
 }
 
 
 int main()
 {
-    cout << sum(2, 2);
+    int num = 4;
+    cout << "Square of " << num << " : " << sqr(num);
     
+
+    return 0;
 }

@@ -22,10 +22,10 @@ int main()
     cout << "x = " << a << "\ty = " << b << endl;
     swapval(a, b);
     
-    double a = 0.5, b = 9.2;
-    cout << "Before swap :-" << endl;
-    cout << "x = " << a << "\ty = " << b << endl;
-    swapval(a, b);
+    // double a = 0.5, b = 9.2;
+    // cout << "Before swap :-" << endl;
+    // cout << "x = " << a << "\ty = " << b << endl;
+    // swapval(a, b);
 
     cout << "Before swap :-" << endl;
     cout << "x = " << m << "\ty = " << n << endl;

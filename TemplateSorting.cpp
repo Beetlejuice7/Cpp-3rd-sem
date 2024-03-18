@@ -28,7 +28,6 @@ void sort(T arr[], int size)
 int main()
 {
     system("clear");
-    int *ptr;
     int arr[]={};
     float arr1[]={};
     int size;
